@@ -17,6 +17,17 @@ This project provides a comprehensive Bash script for network diagnostics, integ
 ## Usage
 
 1. **Clone the Repository**:
-   bash
+   ```bash
    git clone https://github.com/yourusername/network-diagnostic-tool.git
    cd network-diagnostic-tool
+
+2.) **Make the Script Executable
+   ```bash
+   chmod +x net_discov.sh
+
+3.) **Run Script
+   ```bash
+   ./net_discov.sh
+
+
+
