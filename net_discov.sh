@@ -55,8 +55,10 @@ ping_net() {
 			echo "Host $ip is unreachable"
 
 		fi
-	done	
-}
+	done
+ 	echo "Results are in results.txt"
+	echo "Hosts reached found in host_up.txt"
+ }
 
 arp_scan(){
 	#read the users input and store subnet into variable subnet 
