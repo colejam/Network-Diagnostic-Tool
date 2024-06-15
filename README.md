@@ -17,7 +17,7 @@ This project provides a comprehensive Bash script for network diagnostics, integ
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/yourusername/network-diagnostic-tool.git
+   git clone https://github.com/colejam/network-diagnostic-tool.git
    cd network-diagnostic-tool
 
 2. **Make the Script Executable**
