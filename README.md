@@ -1,4 +1,3 @@
-# Network-Diagnostic-Tool
 # Network Diagnostic Tool
 
 This project provides a comprehensive Bash script for network diagnostics, integrating several essential network tools to assist with network configuration, monitoring, and troubleshooting. The script offers a user-friendly, menu-driven interface, making it accessible for both novice and experienced users. This tool can be especially useful for system administrators and network engineers who need to perform various network diagnostic tasks efficiently.
@@ -21,11 +20,11 @@ This project provides a comprehensive Bash script for network diagnostics, integ
    git clone https://github.com/yourusername/network-diagnostic-tool.git
    cd network-diagnostic-tool
 
-2.) **Make the Script Executable
+2. **Make the Script Executable**
    ```bash
    chmod +x net_discov.sh
 
-3.) **Run Script
+3. **Run Script**
    ```bash
    ./net_discov.sh
 
