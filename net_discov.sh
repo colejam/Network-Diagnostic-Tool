@@ -29,10 +29,10 @@ ping_host() {
 }
 
 ping_net() {
-	#read the users input and store subnet into variable
+	#read the users input and store subnet into variable subnet
 	read -p "Enter subnet to ping network: " subnet
 	
-	
+	#clears the output in both txt files each time. 
 	> results.txt
 	> host_up.txt
 
@@ -44,7 +44,7 @@ ping_net() {
 		#pings the network and sends results to txt file
 		ping -c 1 -w 1 $ip >> results.txt
 		
-		#used to check exit codes and executes the statements
+		#used to check exit codes and sends output to the txt file. 
 		if [ "$?" -eq 0 ]; 
 		then 
 			echo "Host $ip is reachable" 
@@ -59,20 +59,21 @@ ping_net() {
 }
 
 arp_scan(){
-	#read the users input and store subnet into variable
+	#read the users input and store subnet into variable subnet 
  	read -p "Enter the subnet: " subnet
 	
-	# shows arp table with verbose output and sorts the arp table
+	# conducts an arp-scan to find the mac address of each device on the network
 	sudo arp-scan $subnet
 }
 
 net_mapper(){
+	#read the users input and stores input into variable host
 	read -p "Enter host to scan: " host
-	
-	#clear past scan results
+
+ 	#read the users input and stores file name into variable
 	read -p "Enter output file name: " filename
 
-	#nmap scan completes TCP Scan 
+	#nmap scan completes TCP Scan and sends ouput to file
 	sudo nmap -sT -T4 $host -oN $filename
 	
 	#used to check exit codes 
@@ -85,16 +86,20 @@ net_mapper(){
 }
 
 use_nslookup() {
+	#read the users input and stores input into variable DNS 
 	read -p "Enter host name: " DNS
-
+	
+ 	#completes a DNS lookup
 	nslookup $DNS
 }
 
 use_netstat() {
+	# use netstat to find all running processes listening on a tcp port with the proccess id.
 	netstat -tulnp
 }
 
 tcpdump(){
+	#tcp dump to capture 50 packets on the provide network interface
 	read -p "Enter the network interface: " interface
 	read -p "Enter the output file name: " filename
 	sudo tcpdump -i $interface -c 50 -w $filename 
