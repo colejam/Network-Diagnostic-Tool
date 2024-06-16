@@ -49,8 +49,6 @@ ping_net() {
 		then 
 			echo "Host $ip is reachable" 
 			echo "$ip" >> host_up.txt
-			echo "Results are in results.txt"
-			echo "Hosts reached found in host_up.txt"
 		else 
 			echo "Host $ip is unreachable"
 
